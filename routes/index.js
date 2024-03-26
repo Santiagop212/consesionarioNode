@@ -16,7 +16,7 @@ const routes = [
     method: 'POST',
     url: '/api/estudiantes',
     handler: carrosController.addCarro,
-    schema: carrosController.addestudiantesSchema
+    schema: carrosController.addcarrosSchema
   },
   {
     method: 'PUT',
