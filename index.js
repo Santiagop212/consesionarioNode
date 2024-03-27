@@ -1,5 +1,5 @@
 // Import Controllers
-const carrosController = require('../controllers/carrosController')
+const carrosController = require('./controllers/carrosController')
 
 const routes = [
   {
