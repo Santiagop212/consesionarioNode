@@ -3,7 +3,7 @@ name: Prueba_m
 on:
   push:
     branches:
-      - "master"
+      - "main"
 
 jobs:
   docker:
