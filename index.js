@@ -31,11 +31,13 @@ fastify.get('/', async (request, reply) => {
 // Run the server
 const start = async () => {
   try {
-    await fastify.listen(8080)
+    await fastify.listen(3000)
     fastify.log.info(`server listening on ${fastify.server.address().port}`)
   } catch (err) {
     fastify.log.error(err)
     process.exit(1)
   }
 }
+
+const port = process.env.port || 8080;
 start()
