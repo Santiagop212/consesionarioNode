@@ -2,7 +2,7 @@ name: Prueba_m
 on:
   push:
     branches:
-      - "master"
+      - "main"
 
 jobs:
   docker:
@@ -25,7 +25,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          tags: "santiago725/consesionario:master"
+          tags: "santiago725/consesionario:master_node"
           # For pull requests, export results to the build cache.
           # Otherwise, push to a registry.
           outputs: ${{ github.event_name == 'pull_request' && 'type=cacheonly' || 'type=registry,load=true' }}
