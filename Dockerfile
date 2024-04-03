@@ -19,3 +19,4 @@ EXPOSE 3000
 # Command to run the application
 CMD ["npm", "run", "start"]
 
+RUN npm install -g nodemon
