@@ -35,6 +35,5 @@ const routes = [
       res.send('OKAY');
     }
   }
- 
 ]
 module.exports = routes
