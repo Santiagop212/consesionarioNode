@@ -2,10 +2,10 @@
 FROM node:20
 
 # Set the working directory in the container
-WORKDIR /usr/src/app
+RUN mkdir  /usr/src/app
 
 # Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
+ENV HOST 0.0.0.0
 
 # Install dependencies
 RUN npm install

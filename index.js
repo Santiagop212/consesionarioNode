@@ -39,5 +39,4 @@ const start = async () => {
   }
 }
 
-const port = process.env.port || 8080;
 start()
