@@ -6,6 +6,7 @@ const fastify = require('fastify')({
 // Require external modules
 const mongoose = require('mongoose')
 const uri = "mongodb+srv://sposada176:YQgWnrA13sRnsyYT@consesionario.rbwhn1n.mongodb.net/?retryWrites=true&w=majority&appName=consesionario";
+
 const connectToDB = async () => {
   try {
     await mongoose.connect(uri, { autoIndex: true });
@@ -31,7 +32,7 @@ fastify.get('/', async (request, reply) => {
 // Run the server
 const start = async () => {
   try {
-    await fastify.listen(3000)
+    await fastify.listen(3000, '0.0.0.0')
     fastify.log.info(`server listening on ${fastify.server.address().port}`)
   } catch (err) {
     fastify.log.error(err)
