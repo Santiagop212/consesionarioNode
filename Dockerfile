@@ -2,13 +2,16 @@
 FROM node:20
 
 # Set the working directory in the container
-RUN mkdir  /usr/src/app
+RUN mkdir -p /usr/src/app
+
+ENV HOST 0.0.0.0
 
 # Copy package.json and package-lock.json to the working directory
-ENV HOST 0.0.0.0
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install
+RUN npm install -g nodemon
 
 # Copy the rest of the application
 COPY . .
@@ -17,6 +20,4 @@ COPY . .
 EXPOSE 3000
 
 # Command to run the application
-CMD ["npm", "run", "start"]
-
-RUN npm install -g nodemon
+CMD ["npm", "start"]
