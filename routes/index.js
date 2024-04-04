@@ -28,6 +28,13 @@ const routes = [
     url: '/api/carros/:id',
     handler: carrosController.deleteCarro
   },
+  {
+    method: 'GET',
+    url: '/api/healthcheck',
+    handler: (req, res) => {
+      res.send('OKAY');
+    }
+  }
  
 ]
 module.exports = routes
