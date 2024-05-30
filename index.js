@@ -5,6 +5,7 @@ const fastify = require('fastify')({
   logger: true
 })
 
+
 // Require external modules
 const mongoose = require('mongoose')
 const uri = "mongodb+srv://sposada176:YQgWnrA13sRnsyYT@consesionario.rbwhn1n.mongodb.net/?retryWrites=true&w=majority&appName=consesionario";
