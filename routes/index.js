@@ -4,7 +4,7 @@ const carrosController = require('../controllers/carrosController')
 const routes = [
   {
     method: 'GET',
-    url: '/api/carros',
+    url: '  ',
     handler: carrosController.getCarros
   },
   {
