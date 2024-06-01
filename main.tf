@@ -26,7 +26,7 @@ resource "google_cloud_run_service" "run_service" {
   template {
     spec {
       containers {
-        image = "gcr.io/carros-419303/autosudem:latest"
+        image = "gcr.io/carros-419303/autosudem@sha256:7a4141b66d36cd3d3ccbd3c546ae1d2180de4fc394dc98734e760457b11809b6"
       }
     }
   }
