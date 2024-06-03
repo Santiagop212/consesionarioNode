@@ -53,8 +53,8 @@ jobs:
       - uses: trstringer/manual-approval@v1
         with:
           secret: ${{ github.TOKEN }}
-          approvers: Santiagop212
-          minimum-approvals: 1
+          approvers: Santiagop212, Jos3f19
+          minimum-approvals: 2
           issue-title: "Deploying with Terraform to GCP"
           issue-body: "Review the terraform plan, then approve or deny the deployment to GCP."
           exclude-workflow-initiator-as-approver: false
